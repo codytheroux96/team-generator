@@ -1,4 +1,3 @@
-const fs = require("fs");
 const inquirer = require("inquirer");
 const Employee = require("./lib/employee.js");
 const generatehtml = require("./utils/generatehtml.js")
@@ -13,9 +12,9 @@ const managerQuestions = () => {
     inquirer
         .prompt(managerQuestionsArray)
         .then((data) => {
-            data = new Manager(data.name, data.id, data.office, data.email)
-            employees.push(data);
-            return whichEmployee();
+            const manager = new Manager(data.name, data.id, data.office, data.email)
+            employees.push(manager);
+            whichEmployee();
         })
 };
 const whichEmployee = () => {
@@ -28,20 +27,10 @@ const whichEmployee = () => {
 
         })
         .then(data => {
-            if (data.whichEmployee === "Manager") { managerQuestions(); };
-            if (data.whichEmployee === "Engineer") { engineerQuestions(); };
-            if (data.whichEmployee === "Intern") { internQuestions(); };
-            if (data.whichEmployee === "Finished"); {writeToFile}
-                function writeToFile(fileName, data){
-                    let content = generatehtml(data);
-                    fs.writeFile("./output/index.html", content, function (error){
-                        if (error) {
-                            return console.log(error)
-                        }
-                        console.log("Success!")
-                        process.exit();
-                    })
-                }
+            if (data.whichEmployee === "Manager") { return managerQuestions(); };
+            if (data.whichEmployee === "Engineer") { return engineerQuestions(); };
+            if (data.whichEmployee === "Intern") { return internQuestions(); };
+            if (data.whichEmployee === "Finished") {return generatehtml(data)};
         })
 
 };
@@ -49,18 +38,18 @@ const internQuestions = () => {
     inquirer
         .prompt(internQuestionsArray)
         .then((data) => {
-            data = new Intern(data.name, data.id, data.school, data.email)
-            employees.push(data);
-            return whichEmployee();
+            const intern = new Intern(data.name, data.id, data.school, data.email)
+            employees.push(intern);
+             whichEmployee();
         })
 };
 const engineerQuestions = () => {
     inquirer
         .prompt(engineerQuestionsArray)
         .then((data) => {
-            data = new Engineer(data.name, data.id, data.github, data.email)
-            employees.push(data);
-            return whichEmployee();
+            const engineer = new Engineer(data.name, data.id, data.github, data.email)
+            employees.push(engineer);
+            whichEmployee();
         })
 };
 

@@ -1,16 +1,4 @@
-const fs = require("fs");
-function writeToFile(html){
-  fs.writeFile("./output/index.html", html, function (error){
-      if (error) {
-          return console.log(error)
-      }
-      console.log("Success!")
-      process.exit();
-  })
-}
-
-const generatehtml = (data) => {
-const template = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,7 +47,4 @@ const template = `<!DOCTYPE html>
       
 </body>
 
-</html>`
-writeToFile(template);
-}
-module.exports = generatehtml;
+</html>
