@@ -4,6 +4,8 @@ const Employee = require("./employee.js");
 const { Engineer, engineerQuestionsArray } = require("./lib/engineer.js");
 const { Intern, internQuestionsArray } = require("./lib/intern.js");
 const { Manager, managerQuestionsArray } = require("./lib/manager.js");
+const employees = [];
+
 
 const init = () => { managerQuestions };
 const managerQuestions = () => {
@@ -11,6 +13,7 @@ const managerQuestions = () => {
         .prompt(managerQuestionsArray)
         .then((data) => {
             data = new Manager(data.name, data.id, data.office, data.email)
+            employees.push(data);
             return whichEmployee();
         })
 };
@@ -36,6 +39,7 @@ const internQuestions = () => {
         .prompt(internQuestionsArray)
         .then((data) => {
             data = new Intern(data.name, data.id, data.school, data.email)
+            employees.push(data);
             return whichEmployee();
         })
 };
@@ -44,6 +48,7 @@ const engineerQuestions = () => {
         .prompt(engineerQuestionsArray)
         .then((data) => {
             data = new Engineer(data.name, data.id, data.github, data.email)
+            employees.push(data);
             return whichEmployee();
         })
 };
