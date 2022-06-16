@@ -13,6 +13,20 @@ const managerQuestions = () => {
         data = new Manager (data.name, data.id, data.office, data.email)
     })
 };
+const internQuestions = () => {
+    inquirer
+    .prompt(internQuestionsArray)
+    .then((data) => {
+        data = new Manager (data.name, data.id, data.school, data.email)
+    })
+};
+const engineerQuestions = () => {
+    inquirer
+    .prompt(engineerQuestionsArray)
+    .then((data) => {
+        data = new Manager (data.name, data.id, data.school, data.email)
+    })
+};
 
 
 
@@ -29,3 +43,4 @@ const managerQuestions = () => {
 
 
 
+init();
