@@ -7,7 +7,7 @@ const { Manager, managerQuestionsArray } = require("./lib/manager.js");
 const employees = [];
 
 
-const init = () => { managerQuestions };
+const init = () => { managerQuestions() };
 const managerQuestions = () => {
     inquirer
         .prompt(managerQuestionsArray)
