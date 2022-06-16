@@ -13,6 +13,17 @@ const managerQuestions = () => {
         data = new Manager (data.name, data.id, data.office, data.email)
     })
 };
+const whichEmployee = () => {
+    inquirer.prompt(
+        {
+            type: "rawlist",
+            name: "whichEmployee",
+            message: "Which employee would you like to add next?",
+            choices: ["Manager", "Engineer", "Intern", "Finished"],
+            
+        }
+    )
+}
 const internQuestions = () => {
     inquirer
     .prompt(internQuestionsArray)
