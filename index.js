@@ -39,6 +39,7 @@ const whichEmployee = () => {
                             return console.log(error)
                         }
                         console.log("Success!")
+                        process.exit();
                     })
                 }
         })
