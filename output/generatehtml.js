@@ -1,3 +1,4 @@
+const generatehtml = (data) => {
 `<!DOCTYPE html>
 <html lang="en">
 
@@ -47,4 +48,5 @@
       
 </body>
 
-</html>`
+</html>` }
+module.exports = generatehtml;
