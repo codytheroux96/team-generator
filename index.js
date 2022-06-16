@@ -17,6 +17,8 @@ const inquirer = require("inquirer")
 
 
 
+
+
 const writeFile = (fileContent) => {
     fs.writeFile("./output/index.html", fileContent, (err) => {
 		if (err) {
