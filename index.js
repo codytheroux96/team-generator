@@ -24,8 +24,11 @@ const whichEmployee = () => {
         }
         .then (data => {
             if (data.whichEmployee === "Manager")
+            {managerQuestions();};
             if (data.whichEmployee === "Engineer")
+            {engineerQuestions ();};
             if (data.whichEmployee === "Intern")
+            {internQuestions();};
             if (data.whichEmployee === "Finished");
         })
     )
