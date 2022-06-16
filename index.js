@@ -31,9 +31,16 @@ const whichEmployee = () => {
             if (data.whichEmployee === "Manager") { managerQuestions(); };
             if (data.whichEmployee === "Engineer") { engineerQuestions(); };
             if (data.whichEmployee === "Intern") { internQuestions(); };
-            if (data.whichEmployee === "Finished"); {
-
-            }
+            if (data.whichEmployee === "Finished"); {writeToFile}
+                function writeToFile(fileName, data){
+                    let content = generatehtml(data);
+                    fs.writeFile("./output/index.html", content, function (error){
+                        if (error) {
+                            return console.log(error)
+                        }
+                        console.log("Success!")
+                    })
+                }
         })
 
 };
