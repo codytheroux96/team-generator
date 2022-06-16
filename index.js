@@ -11,6 +11,7 @@ const managerQuestions = () => {
         .prompt(managerQuestionsArray)
         .then((data) => {
             data = new Manager(data.name, data.id, data.office, data.email)
+            return whichEmployee();
         })
 };
 const whichEmployee = () => {
@@ -35,6 +36,7 @@ const internQuestions = () => {
         .prompt(internQuestionsArray)
         .then((data) => {
             data = new Intern(data.name, data.id, data.school, data.email)
+            return whichEmployee();
         })
 };
 const engineerQuestions = () => {
@@ -42,6 +44,7 @@ const engineerQuestions = () => {
         .prompt(engineerQuestionsArray)
         .then((data) => {
             data = new Engineer(data.name, data.id, data.github, data.email)
+            return whichEmployee();
         })
 };
 
