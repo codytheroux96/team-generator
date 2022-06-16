@@ -22,6 +22,12 @@ const whichEmployee = () => {
             choices: ["Manager", "Engineer", "Intern", "Finished"],
             
         }
+        .then (data => {
+            if (data.whichEmployee === "Manager")
+            if (data.whichEmployee === "Engineer")
+            if (data.whichEmployee === "Intern")
+            if (data.whichEmployee === "Finished");
+        })
     )
 }
 const internQuestions = () => {
