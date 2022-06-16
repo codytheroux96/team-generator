@@ -34,14 +34,14 @@ const internQuestions = () => {
     inquirer
         .prompt(internQuestionsArray)
         .then((data) => {
-            data = new Manager(data.name, data.id, data.school, data.email)
+            data = new Intern(data.name, data.id, data.school, data.email)
         })
 };
 const engineerQuestions = () => {
     inquirer
         .prompt(engineerQuestionsArray)
         .then((data) => {
-            data = new Manager(data.name, data.id, data.github, data.email)
+            data = new Engineer(data.name, data.id, data.github, data.email)
         })
 };
 
