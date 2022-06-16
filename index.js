@@ -30,12 +30,12 @@ const whichEmployee = () => {
                 if (data.whichEmployee === "Manager") { managerQuestions(); };
                 if (data.whichEmployee === "Engineer") { engineerQuestions(); };
                 if (data.whichEmployee === "Intern") { internQuestions(); };
-                if (data.whichEmployee === "Finished");{
+                if (data.whichEmployee === "Finished"); {
 
                 }
             })
     )
-}
+};
 const internQuestions = () => {
     inquirer
         .prompt(internQuestionsArray)
