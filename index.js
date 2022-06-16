@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const Employee = require("./employee.js");
+const Employee = require("./lib/employee.js");
 const { Engineer, engineerQuestionsArray } = require("./lib/engineer.js");
 const { Intern, internQuestionsArray } = require("./lib/intern.js");
 const { Manager, managerQuestionsArray } = require("./lib/manager.js");
@@ -30,7 +30,9 @@ const whichEmployee = () => {
                 if (data.whichEmployee === "Manager") { managerQuestions(); };
                 if (data.whichEmployee === "Engineer") { engineerQuestions(); };
                 if (data.whichEmployee === "Intern") { internQuestions(); };
-                if (data.whichEmployee === "Finished");
+                if (data.whichEmployee === "Finished");{
+
+                }
             })
     )
 }
