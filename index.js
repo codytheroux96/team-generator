@@ -44,7 +44,7 @@ const engineerQuestions = () => {
     inquirer
     .prompt(engineerQuestionsArray)
     .then((data) => {
-        data = new Manager (data.name, data.id, data.school, data.email)
+        data = new Manager (data.name, data.id, data.github, data.email)
     })
 };
 
