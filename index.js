@@ -1,6 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Employee = require("./lib/employee.js");
+const generatehtml = require("./output/generatehtml.js")
 const { Engineer, engineerQuestionsArray } = require("./lib/engineer.js");
 const { Intern, internQuestionsArray } = require("./lib/intern.js");
 const { Manager, managerQuestionsArray } = require("./lib/manager.js");
