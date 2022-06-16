@@ -1,7 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Employee = require("./lib/employee.js");
-const generatehtml = require("./output/generatehtml.js")
+const generatehtml = require("./utils/generatehtml.js")
 const { Engineer, engineerQuestionsArray } = require("./lib/engineer.js");
 const { Intern, internQuestionsArray } = require("./lib/intern.js");
 const { Manager, managerQuestionsArray } = require("./lib/manager.js");
@@ -26,16 +26,16 @@ const whichEmployee = () => {
             message: "Which employee would you like to add next?",
             choices: ["Manager", "Engineer", "Intern", "Finished"],
 
-        }
-            .then(data => {
-                if (data.whichEmployee === "Manager") { managerQuestions(); };
-                if (data.whichEmployee === "Engineer") { engineerQuestions(); };
-                if (data.whichEmployee === "Intern") { internQuestions(); };
-                if (data.whichEmployee === "Finished"); {
+        })
+        .then(data => {
+            if (data.whichEmployee === "Manager") { managerQuestions(); };
+            if (data.whichEmployee === "Engineer") { engineerQuestions(); };
+            if (data.whichEmployee === "Intern") { internQuestions(); };
+            if (data.whichEmployee === "Finished"); {
 
-                }
-            })
-    )
+            }
+        })
+
 };
 const internQuestions = () => {
     inquirer

@@ -1,5 +1,5 @@
 const generatehtml = (data) => {
-`<!DOCTYPE html>
+const template = `<!DOCTYPE html>
 <html lang="en">
 
 <head>
