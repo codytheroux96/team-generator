@@ -9,8 +9,29 @@ function writeToFile(html) {
   })
 }
 
-const generatehtml = (data) => {
-  console.log(data)
+// const generatehtml = (data) => {
+//   `<head>
+//   <meta charset="UTF-8">
+//   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//   <title>Team Generator</title>
+//   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+//       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+// </head>
+
+// <body>
+// <header class = "container">
+// <div class = "flex box justify-center my-team">
+//   <h1> My Team </h1>
+// </div>
+// </header>
+// <main class = "container">
+// ${employeessCards(data)}
+// </main>
+    
+// </body>
+
+// </html>`
   const manager = managerData => `
   <div class="card bg-light mb-3" style="max-width: 18rem;">
   <div class="card-header">${managerData.getName()}</div>
@@ -68,6 +89,7 @@ const generatehtml = (data) => {
     }
     return employeesHtml;
   }
+
   writeToFile(employeessCards(data));
-}
+//}
 module.exports = generatehtml;
