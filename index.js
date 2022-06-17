@@ -30,7 +30,7 @@ const whichEmployee = () => {
             if (data.whichEmployee === "Manager") { return managerQuestions(); };
             if (data.whichEmployee === "Engineer") { return engineerQuestions(); };
             if (data.whichEmployee === "Intern") { return internQuestions(); };
-            if (data.whichEmployee === "Finished") {return generatehtml(data)};
+            if (data.whichEmployee === "Finished") {return generatehtml(employees)};
         })
 
 };

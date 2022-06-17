@@ -13,13 +13,13 @@
 <body>
     
       <div class="card bg-light mb-3" style="max-width: 18rem;">
-        <div class="card-header">Manager Name</div>
+        <div class="card-header">${managerData.getName()}</div>
         <div class="card-body">
-          <h5 class="card-title">Manager</h5>
+          <h5 class="card-title">${managerData.getRole()}</h5>
           <ul>
-            <li>ID</li>
-            <li>Email</li>
-            <li>Office Number</li>
+            <li>${managerData.getId()}</li>
+            <li>${managerData.getEmail()}</li>
+            <li>${managerData.getOffice()}</li>
           </ul>
       </div>
 
