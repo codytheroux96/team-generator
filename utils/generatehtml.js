@@ -78,13 +78,13 @@ const generatehtml = (data) => {
   <title>Team Generator</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-      <link rel="stylesheet" href="/output/style.css">
+  <link rel="stylesheet" href="/output/style.css">
 </head>
 
 <body>
 <header class = "container">
 <div class = "flex box justify-center my-team">
-  <h1> My Team </h1>
+  <h1> Meet The Team! </h1>
 </div>
 </header>
 <main class = "container custom-container">
