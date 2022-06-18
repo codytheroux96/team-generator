@@ -13,8 +13,8 @@ const generatehtml = (data) => {
   const manager = managerData => {
     return `
   <div class="card bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">${managerData.getName()}</div>
-  <div class="card-body">
+  <div class="card-header custom-header">${managerData.getName()}</div>
+  <div class="card-body custom-body">
     <h5 class="card-title">${managerData.getRole()}</h5>
     <ul>
       <li>${managerData.getId()}</li>
@@ -26,8 +26,8 @@ const generatehtml = (data) => {
   const engineer = engineerData => { 
     return`
   <div class="card bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">${engineerData.getName()}</div>
-  <div class="card-body">
+  <div class="card-header custom-header">${engineerData.getName()}</div>
+  <div class="card-body custom-body">
     <h5 class="card-title">${engineerData.getRole()}</h5>
     <ul>
       <li>${engineerData.getId()}</li>
@@ -41,8 +41,8 @@ const generatehtml = (data) => {
   const intern = internData => { 
     return`
   <div class="card bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">${internData.getName()}</div>
-  <div class="card-body">
+  <div class="card-header custom-header">${internData.getName()}</div>
+  <div class="card-body custom-body">
     <h5 class="card-title">${internData.getRole()}</h5>
     <ul>
       <li>${internData.getId()}</li>
@@ -78,7 +78,7 @@ const generatehtml = (data) => {
   <title>Team Generator</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-      <link rel="stylesheet" href="./output/style.css">
+      <link rel="stylesheet" href="/output/style.css">
 </head>
 
 <body>
@@ -87,7 +87,7 @@ const generatehtml = (data) => {
   <h1> My Team </h1>
 </div>
 </header>
-<main class = "container">
+<main class = "container custom-container">
 ${employeessCards(data)}
 </main>
     

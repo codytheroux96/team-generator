@@ -1,15 +1,15 @@
-body{
+.custom-container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-header {
+.custom-header {
     background-color: black;
     color: white;
 }
 
-.card-body  {
+.custom-body  {
     background-color: blue;
     color: white;
 }
