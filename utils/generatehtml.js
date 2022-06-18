@@ -10,7 +10,8 @@ function writeToFile(html) {
 }
 
 const generatehtml = (data) => {
-  const manager = managerData => `
+  const manager = managerData => {
+    return `
   <div class="card bg-light mb-3" style="max-width: 18rem;">
   <div class="card-header">${managerData.getName()}</div>
   <div class="card-body">
@@ -21,24 +22,24 @@ const generatehtml = (data) => {
       <li>${managerData.getOffice()}</li>
     </ul>
   </div>
-`
-
-
-  const engineer = engineerData => `
+` }
+  const engineer = engineerData => { 
+    return`
   <div class="card bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">${managerData.getName()}</div>
+  <div class="card-header">${engineerData.getName()}</div>
   <div class="card-body">
-    <h5 class="card-title">${managerData.getRole()}</h5>
+    <h5 class="card-title">${engineerData.getRole()}</h5>
     <ul>
       <li>${engineerData.getId()}</li>
       <li>${engineerData.getEmail()}</li>
       <li>${engineerData.getGithub()}</li>
     </ul>
   </div>
-`
+` }
+  
 
-
-  const intern = internData => `
+  const intern = internData => { 
+    return`
   <div class="card bg-light mb-3" style="max-width: 18rem;">
   <div class="card-header">${internData.getName()}</div>
   <div class="card-body">
@@ -49,8 +50,7 @@ const generatehtml = (data) => {
       <li>${internData.getSchool()}</li>
     </ul>
   </div>
-`
-
+` }
 
   const employeessCards = employees => {
     let employeesHtml = ""
