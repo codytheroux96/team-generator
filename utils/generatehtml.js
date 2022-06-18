@@ -12,43 +12,46 @@ function writeToFile(html) {
 const generatehtml = (data) => {
   const manager = managerData => {
     return `
-  <div class="card bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header custom-header">${managerData.getName()}</div>
-  <div class="card-body custom-body">
-    <h5 class="card-title">${managerData.getRole()}</h5>
-    <ul>
-      <li>${managerData.getId()}</li>
-      <li>${managerData.getEmail()}</li>
-      <li>${managerData.getOffice()}</li>
-    </ul>
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">${managerData.getName()}</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">${managerData.getRole()}</h5>
+      <ul>
+        <li>${managerData.getId()}</li>
+        <li>${managerData.getEmail()}</li>
+        <li>${managerData.getOffice()}</li>
+      </ul>
+    </div>
   </div>
 ` }
   const engineer = engineerData => { 
     return`
-  <div class="card bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header custom-header">${engineerData.getName()}</div>
-  <div class="card-body custom-body">
-    <h5 class="card-title">${engineerData.getRole()}</h5>
-    <ul>
-      <li>${engineerData.getId()}</li>
-      <li>${engineerData.getEmail()}</li>
-      <li>${engineerData.getGithub()}</li>
-    </ul>
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">${engineerData.getName()}</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">${engineerData.getRole()}</h5>
+      <ul>
+        <li>${engineerData.getId()}</li>
+        <li>${engineerData.getEmail()}</li>
+        <li>${engineerData.getGithub()}</li>
+      </ul>
+    </div>
   </div>
 ` }
   
 
   const intern = internData => { 
     return`
-  <div class="card bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header custom-header">${internData.getName()}</div>
-  <div class="card-body custom-body">
-    <h5 class="card-title">${internData.getRole()}</h5>
-    <ul>
-      <li>${internData.getId()}</li>
-      <li>${internData.getEmail()}</li>
-      <li>${internData.getSchool()}</li>
-    </ul>
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">${internData.getName()}</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">${internData.getRole()}</h5>
+      <ul>
+        <li>${internData.getId()}</li>
+        <li>${internData.getEmail()}</li>
+        <li>${internData.getSchool()}</li>
+      </ul>
+    </div>
   </div>
 ` }
 
