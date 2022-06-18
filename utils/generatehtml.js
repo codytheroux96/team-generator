@@ -12,7 +12,7 @@ function writeToFile(html) {
 const generatehtml = (data) => {
   const manager = managerData => {
     return `
-    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card border-dark mb-3 col-12 d-flex justify-content-center" style="max-width: 18rem;">
     <div class="card-header">${managerData.getName()}</div>
     <div class="card-body text-dark">
       <h5 class="card-title">${managerData.getRole()}</h5>
@@ -26,7 +26,7 @@ const generatehtml = (data) => {
 ` }
   const engineer = engineerData => { 
     return`
-    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card border-dark mb-3 col-12 d-flex justify-content-center" style="max-width: 18rem;">
     <div class="card-header">${engineerData.getName()}</div>
     <div class="card-body text-dark">
       <h5 class="card-title">${engineerData.getRole()}</h5>
@@ -42,7 +42,7 @@ const generatehtml = (data) => {
 
   const intern = internData => { 
     return`
-    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card border-dark mb-3 col-12 d-flex justify-content-center" style="max-width: 18rem;">
     <div class="card-header">${internData.getName()}</div>
     <div class="card-body text-dark">
       <h5 class="card-title">${internData.getRole()}</h5>
@@ -86,11 +86,11 @@ const generatehtml = (data) => {
 
 <body>
 <header class = "container">
-<div class = "flex box justify-center my-team">
+<div class = "d-flex justify-center my-team">
   <h1> Meet The Team! </h1>
 </div>
 </header>
-<main class = "container custom-container">
+<main class = "container custom-container d-flex justify-content-center">
 ${employeessCards(data)}
 </main>
     
