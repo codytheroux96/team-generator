@@ -22,7 +22,7 @@ const generatehtml = (data) => {
     </ul>
   </div>
 `
-  
+
 
   const engineer = engineerData => `
   <div class="card bg-light mb-3" style="max-width: 18rem;">
@@ -36,7 +36,7 @@ const generatehtml = (data) => {
     </ul>
   </div>
 `
-  
+
 
   const intern = internData => `
   <div class="card bg-light mb-3" style="max-width: 18rem;">
@@ -50,7 +50,7 @@ const generatehtml = (data) => {
     </ul>
   </div>
 `
-  
+
 
   const employeessCards = employees => {
     let employeesHtml = ""
@@ -68,7 +68,7 @@ const generatehtml = (data) => {
     return employeesHtml;
   }
   const template = data => {
-  return `
+    return `
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -78,6 +78,7 @@ const generatehtml = (data) => {
   <title>Team Generator</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+      <link rel="stylesheet" href="./output/style.css">
 </head>
 
 <body>
@@ -94,7 +95,7 @@ ${employeessCards(data)}
 
 </html>
 `
-}
+  }
 
   writeToFile(template(data));
 }
