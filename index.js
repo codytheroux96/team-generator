@@ -6,7 +6,7 @@ const { Intern, internQuestionsArray } = require("./lib/intern.js");
 const { Manager, managerQuestionsArray } = require("./lib/manager.js");
 const employees = [];
 
-
+//this is the init function that starts the user off with a prompt to fill out information about the manager
 const init = () => { managerQuestions() };
 const managerQuestions = () => {
     inquirer
@@ -17,6 +17,7 @@ const managerQuestions = () => {
             whichEmployee();
         })
 };
+//this is the prompt that will ask the user which employee they want to give information about next
 const whichEmployee = () => {
     inquirer.prompt(
         {
@@ -34,6 +35,7 @@ const whichEmployee = () => {
         })
 
 };
+//upon selecting intern, the user will get the questions from the internquestionsarray and the answers they give will be stored and able to be pulled
 const internQuestions = () => {
     inquirer
         .prompt(internQuestionsArray)
@@ -43,6 +45,8 @@ const internQuestions = () => {
              whichEmployee();
         })
 };
+//upon selecting engineer, the user will get the questions from the engineerquesetionsarray and the answers they give will be stored and able to be pulled
+
 const engineerQuestions = () => {
     inquirer
         .prompt(engineerQuestionsArray)
@@ -55,7 +59,7 @@ const engineerQuestions = () => {
 
 
 
-
+//calls the init function
 init();
 
 

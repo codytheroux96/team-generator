@@ -1,3 +1,4 @@
+//function that writes this information to a new html page
 const fs = require("fs");
 function writeToFile(html) {
   fs.writeFile("./output/index.html", html, function (error) {
@@ -8,7 +9,7 @@ function writeToFile(html) {
     process.exit();
   })
 }
-
+//these are the employee cards that will be generated with the info that the user gives by answering the corresponding prompts
 const generatehtml = (data) => {
   const manager = managerData => {
     return `
@@ -24,6 +25,7 @@ const generatehtml = (data) => {
     </div>
   </div>
 ` }
+
   const engineer = engineerData => { 
     return`
     <div class="card border-dark mb-3 col-12 d-flex justify-content-center custom-card" style="max-width: 18rem;">
@@ -39,7 +41,6 @@ const generatehtml = (data) => {
   </div>
 ` }
   
-
   const intern = internData => { 
     return`
     <div class="card border-dark mb-3 col-12 d-flex justify-content-center custom-card" style="max-width: 18rem;">
@@ -54,7 +55,7 @@ const generatehtml = (data) => {
     </div>
   </div>
 ` }
-
+//this for loop will generate a new employee card depending on which employee the user selects to give info about
   const employeessCards = employees => {
     let employeesHtml = ""
     for (i = 0; i < employees.length; i++) {
@@ -70,6 +71,7 @@ const generatehtml = (data) => {
     }
     return employeesHtml;
   }
+  //this is the template for the html that will be generated
   const template = data => {
     return `
   <!DOCTYPE html>
