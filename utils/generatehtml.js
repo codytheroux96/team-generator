@@ -17,9 +17,9 @@ const generatehtml = (data) => {
     <div class="card-body text-dark">
       <h5 class="card-title">${managerData.getRole()}</h5>
       <ul>
-        <li>${managerData.getId()}</li>
-        <li>${managerData.getEmail()}</li>
-        <li>${managerData.getOffice()}</li>
+        <li>ID: ${managerData.getId()}</li>
+        <li>Email: ${managerData.getEmail()}</li>
+        <li>Office number: ${managerData.getOffice()}</li>
       </ul>
     </div>
   </div>
@@ -31,9 +31,9 @@ const generatehtml = (data) => {
     <div class="card-body text-dark">
       <h5 class="card-title">${engineerData.getRole()}</h5>
       <ul>
-        <li>${engineerData.getId()}</li>
-        <li>${engineerData.getEmail()}</li>
-        <li>${engineerData.getGithub()}</li>
+        <li>ID: ${engineerData.getId()}</li>
+        <li>Email: ${engineerData.getEmail()}</li>
+        <li>Github: ${engineerData.getGithub()}</li>
       </ul>
     </div>
   </div>
@@ -47,9 +47,9 @@ const generatehtml = (data) => {
     <div class="card-body text-dark">
       <h5 class="card-title">${internData.getRole()}</h5>
       <ul>
-        <li>${internData.getId()}</li>
-        <li>${internData.getEmail()}</li>
-        <li>${internData.getSchool()}</li>
+        <li>ID: ${internData.getId()}</li>
+        <li>Email: ${internData.getEmail()}</li>
+        <li>School: ${internData.getSchool()}</li>
       </ul>
     </div>
   </div>
