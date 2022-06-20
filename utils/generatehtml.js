@@ -90,7 +90,7 @@ const generatehtml = (data) => {
   <h1> Meet The Team! </h1>
 </div>
 </header>
-<main class = "container custom-container d-flex justify-content-center">
+<main class = "container d-flex justify-content-center custom-container">
 ${employeessCards(data)}
 </main>
     
