@@ -13,7 +13,7 @@
 - With this application I also wrote unit tests for each part of my code and ensured that it passes all of those tests. 
 
 ## Visuals
-- https://drive.google.com/file/d/12_Fngqum-9PmiP1BrIJ9u0UdYN8DuJn3/view?usp=sharing
+- [Demo Vid](https://drive.google.com/file/d/12_Fngqum-9PmiP1BrIJ9u0UdYN8DuJn3/view?usp=sharing)
 
 ## Installation
 - You will need to do type in the following commands in your terminal:
