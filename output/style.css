@@ -5,8 +5,26 @@
 }
 
 .custom-container{
-    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
+.custom-header {
+    display: flex;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    justify-content: center;
+}
+
+.custom-card {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right:40px;
+}
+
+.custom-body  {
+    background-color: var(--main-bg-color1);
+    color: var(--main-color);
+}
