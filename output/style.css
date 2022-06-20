@@ -1,6 +1,5 @@
 :root {
     --main-bg-color: black;
-    --main-bg-color1: blue;
     --main-color: white;
 }
 
@@ -24,7 +23,3 @@
     margin-right:40px;
 }
 
-.custom-body  {
-    background-color: var(--main-bg-color1);
-    color: var(--main-color);
-}

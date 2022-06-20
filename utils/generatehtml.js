@@ -13,8 +13,8 @@ const generatehtml = (data) => {
   const manager = managerData => {
     return `
     <div class="card border-dark mb-3 col-12 d-flex justify-content-center custom-card" style="max-width: 18rem;">
-    <div class="card-header custom-header">${managerData.getName()}</div>
-    <div class="card-body text-light custom-body">
+    <div class="card-header">${managerData.getName()}</div>
+    <div class="card-body text-dark">
       <h5 class="card-title">${managerData.getRole()}</h5>
       <ul>
         <li>${managerData.getId()}</li>
@@ -27,8 +27,8 @@ const generatehtml = (data) => {
   const engineer = engineerData => { 
     return`
     <div class="card border-dark mb-3 col-12 d-flex justify-content-center custom-card" style="max-width: 18rem;">
-    <div class="card-header custom-header">${engineerData.getName()}</div>
-    <div class="card-body text-light custom-body">
+    <div class="card-header">${engineerData.getName()}</div>
+    <div class="card-body text-dark">
       <h5 class="card-title">${engineerData.getRole()}</h5>
       <ul>
         <li>${engineerData.getId()}</li>
@@ -43,8 +43,8 @@ const generatehtml = (data) => {
   const intern = internData => { 
     return`
     <div class="card border-dark mb-3 col-12 d-flex justify-content-center custom-card" style="max-width: 18rem;">
-    <div class="card-header custom-header">${internData.getName()}</div>
-    <div class="card-body text-light custom-body">
+    <div class="card-header">${internData.getName()}</div>
+    <div class="card-body text-dark">
       <h5 class="card-title">${internData.getRole()}</h5>
       <ul>
         <li>${internData.getId()}</li>
