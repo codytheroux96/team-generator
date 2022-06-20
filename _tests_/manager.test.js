@@ -1,22 +1,18 @@
-const Manager = require("../lib/manager");
+const {Manager} = require("../lib/manager");
 
-describe("Manager", () => {
-it("Creates new Manager", () => {
-    const manager = new Manager("Your manager", "ab12", "your@manager.com", "manager-school");
-    expect(manager.name).toBe("Your manager");
-    expect(manager.id).toEqual(expect.any(String));
-    expect(manager.email).toEqual(expect.any(String));
-    expect(manager.school).toEqual(expect.any(String));
+test("Creates new Manager", () => {
+    const employee = new Manager("Your manager", "ab12", "your@manager.com", "manager-school");
+    expect(employee.name).toBe("Your manager");
+    expect(employee.id).toEqual(expect.any(String));
+    expect(employee.email).toEqual(expect.any(String));
+    expect(employee.office).toEqual(expect.any(String));
 })
 
-describe("get", () => {
-it("Checks all methods for Manager class", () => {
-    const manager = new manager("Your manager", "ab12", "your@manager.com", "1234");
-    expect(manager.getName()).toBe(manager.name);
-    expect(manager.getId()).toBe(manager.id);
-    expect(manager.getEmail()).toBe(manager.email);
-    expect(manager.getOffice()).toBe(manager.office);
-    expect(manager.getRole()).toBe("Manager");
-})
-})
+test("Checks all methods for Manager class", () => {
+    const employee = new Manager("Your manager", "ab12", "your@manager.com", "1234");
+    expect(employee.getName()).toBe(employee.name);
+    expect(employee.getId()).toBe(employee.id);
+    expect(employee.getEmail()).toBe(employee.email);
+    expect(employee.getOffice()).toBe(employee.office);
+    expect(employee.getRole()).toBe("Manager");
 })

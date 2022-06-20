@@ -1,22 +1,18 @@
-const Engineer = require("../lib/engineer");
+const {Engineer} = require("../lib/engineer");
 
-describe("Engineer", () => {
-it("Creates new engineer", () => {
-    const engineer = new Engineer("Your engineer", "ab12", "your@engineer.com", "your-engineer");
-    expect(engineer.name).toBe("Your engineer");
-    expect(engineer.id).toEqual(expect.any(String));
-    expect(engineer.email).toEqual(expect.any(String));
-    expect(engineer.github).toEqual(expect.any(String));
+test("Creates new Engineer", () => {
+    const employee = new Engineer("Your engineer", "ab12", "your@engineer.com", "your-engineer");
+    expect(employee.name).toBe("Your engineer");
+    expect(employee.id).toEqual(expect.any(String));
+    expect(employee.email).toEqual(expect.any(String));
+    expect(employee.github).toEqual(expect.any(String));
 })
 
-describe("get", () => {
-it("Checks all methods for Engineer class", () => {
-    const engineer = new Engineer("Your engineer", "ab12", "your@engineer.com", "your-engineer");
-    expect(engineer.getName()).toBe(engineer.name);
-    expect(engineer.getId()).toBe(engineer.id);
-    expect(engineer.getEmail()).toBe(engineer.email);
-    expect(engineer.getGithub()).toBe(engineer.github);
-    expect(engineer.getRole()).toBe("Engineer");
-})
-})
+test("Checks all methods for Engineer class", () => {
+    const employee = new Engineer("Your engineer", "ab12", "your@engineer.com", "your-engineer");
+    expect(employee.getName()).toBe(employee.name);
+    expect(employee.getId()).toBe(employee.id);
+    expect(employee.getEmail()).toBe(employee.email);
+    expect(employee.getGithub()).toBe(employee.github);
+    expect(employee.getRole()).toBe("Engineer");
 })
